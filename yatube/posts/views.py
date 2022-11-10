@@ -3,7 +3,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Главная страница')
+    template = 'posts/index.html'
+    return render(request, template)
 
 
 # В урл мы ждем парметр, и нужно его прередать в функцию для использования
