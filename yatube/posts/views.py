@@ -12,7 +12,7 @@ def index(request):
 
 
 # В урл мы ждем парметр, и нужно его прередать в функцию для использования
-def group_posts(request, slug):
+def group_posts(request):
     template = 'posts/group_list.html'
     text = 'Здесь будет информация о группах проекта Yatube'
     context = {
