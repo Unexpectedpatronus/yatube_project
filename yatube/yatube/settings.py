@@ -68,6 +68,9 @@ TEMPLATES = [
     },
 ]
 
+# Путь к директории со статическими файлами:
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 WSGI_APPLICATION = 'yatube.wsgi.application'
 
 # Database
