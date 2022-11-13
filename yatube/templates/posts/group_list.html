@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% block title %}
-    {{ title|safe }}
+  {{ title|safe }}
 {% endblock %}
 {% block content %}
-    {% for post in posts %}
-        <ul>
-            <li>
-                Автор: {{ post.author.get_full_name }}
-            </li>
-            <li>
-                Дата публикации: {{ post.pub_date|date:"d E Y" }}
-            </li>
-        </ul>
-        <p>{{ post.text }}</p>
+  {% for post in posts %}
+    <ul>
+      <li>
+        Автор: {{ post.author.get_full_name }}
+      </li>
+      <li>
+        Дата публикации: {{ post.pub_date|date:"d E Y" }}
+      </li>
+    </ul>
+    <p>{{ post.text }}</p>
 
-        {% if not forloop.last %}
-            <hr>
-        {% endif %}
-    {% endfor %}
-    <!-- под последним постом нет линии -->
+    {% if not forloop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+  <!-- под последним постом нет линии -->
 {% endblock %}
